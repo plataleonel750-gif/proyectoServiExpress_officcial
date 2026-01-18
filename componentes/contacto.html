@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiExpress SE</title>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-content">
+    <!-- Logo -->
+    <div class="logo">
+      <span class="logo-box">SE</span>
+      <div class="logo-text">
+        <strong>Servi Express</strong>
+        <small>Expertos en Reparación</small>
+      </div>
+    </div>
+
+    <!-- Navegación desktop -->
+    <nav class="nav desktop-nav">
+       <a href="/index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="cobertura.html">Cobertura</a>
+      <a href="garantia.html">Garantías</a>
+      <a href="comoFunciona.html">Cómo Funciona</a>
+      <a href="preguntas.html">Preguntas Frecuentes</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <!-- Botón contacto desktop -->
+    <a href="https://wa.me/3171753640?text=Hola%21%20Quisiera%20más%20información" class="btn-contact desktop-btn">Contactar</a>
+
+    <!-- Menú hamburguesa (solo móvil) -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <!-- Menú móvil desplegable -->
+    <nav class="mobile-menu">
+       <a href="/index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="cobertura.html">Cobertura</a>
+      <a href="garantia.html">Garantías</a>
+      <a href="comoFunciona.html">Cómo Funciona</a>
+      <a href="preguntas.html">Preguntas Frecuentes</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="section1">
+  <section class="hero-about">
+  <h1 id="titulo1">Contáctanos</h1>
+  <p id="parrafo1">
+    Estamos listos para ayudarte. Escríbenos o llámanos para agendar tu servicio técnico.
+  </p>
+</section>
+
+   
+</section>
+ 
+
+
+
+
+
+<section class="contact-section">
+  <div class="container">
+    <h2>¿Necesitas Ayuda? Contáctanos</h2>
+    <p class="subtitle">Estamos disponibles para atenderte. Comunícate con nosotros por el medio que prefieras.</p>
+
+    <div class="contact-info-grid">
+      <div class="info-card">
+        <div class="icon">📞</div>
+        <h3>Teléfono</h3>
+        <p>3171753640</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">✉️</div>
+        <h3>Email</h3>
+        <p>agendaserviexpress@gmail.com</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">📍</div>
+        <h3>Ubicación</h3>
+        <p>Medellín y sus alrededores. Antioquia Colombia</p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">⏰</div>
+        <h3>Horario</h3>
+        <p>24/7 Disponible</p>
+      </div>
+    </div>
+
+    <div class="contact-form-grid">
+      <div class="form-column">
+        <h3>Envíanos Un Mensaje</h3>
+        <form id="contact-form">
+          <label for="nombre">Nombre Completo *</label>
+          <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+
+          <label for="telefono">Teléfono *</label>
+          <input type="tel" id="telefono" placeholder="Tu número de WhatsApp" required>
+
+          <label for="email">Email (Opcional)</label>
+          <input type="email" id="email" placeholder="tu@email.com">
+
+          <label for="mensaje">Mensaje *</label>
+          <textarea id="mensaje" placeholder="Cuéntanos sobre tu problema o consulta..." required></textarea>
+
+          <button type="submit" class="whatsapp-btn">📱 Enviar por WhatsApp</button>
+        </form>
+      </div>
+
+      <div class="direct-contact-column">
+        <h3>Contacto Directo</h3>
+        <p>¿Prefieres llamar o escribir directamente? Usa estos botones para contacto inmediato</p>
+        <a href="tel:3226177726" class="direct-btn call-btn">📞 Llamar Ahora</a>
+        <a href="https://wa.me/3171753640" class="direct-btn whatsapp-direct-btn">📱 WhatsApp Directo</a>
+
+        <div class="why-choose-us">
+          <h3>¿Por qué elegirnos?</h3>
+          <ul>
+            <li>Respuesta rápida en menos de 24 horas</li>
+            <li>Técnicos certificados y experimentados</li>
+            <li>Atención personalizada y profesional</li>
+            <li>Servicio disponible 24/7</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const nombre = document.getElementById('nombre').value;
+    const telefono = document.getElementById('telefono').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;
+    
+    const text = `Hola, soy ${nombre}. Mi teléfono es ${telefono}. ${email ? 'Email: ' + email + '. ' : ''}Mensaje: ${mensaje}`;
+    const encodedText = encodeURIComponent(text);
+    
+    const whatsappUrl = `https://wa.me/3171753640?text=${encodedText}`;
+    window.open(whatsappUrl, '_blank');
+  });
+</script>
+
+
+
+
+<section class="faq-section">
+   <div class="container">
+    <section class="hero-about">
+  <h1>Preguntas Frecuentes</h1>
+  <p>
+   Encuentra respuestas a las preguntas más comunes sobre nuestros servicios
+  </p>
+</section>
+ 
+    <details class="faq-item">
+      <summary class="faq-question">
+        ¿Cuánto tiempo tarda la reparación?
+      </summary>
+      <div class="faq-answer">
+        <p>La mayoría de reparaciones se completan el mismo día. En casos más complejos, puede tomar de 24 a 48 horas. Siempre te informaremos el tiempo estimado después del diagnóstico.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        ¿Ofrecen garantía en las reparaciones?
+      </summary>
+      <div class="faq-answer">
+        <p>Sí, todos nuestros servicios incluyen garantía por escrito. La duración varía según el tipo de reparación, pero generalmente es de 30 a 90 días.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        ¿Cuál es el costo del servicio?
+      </summary>
+      <div class="faq-answer">
+        <p>El costo varía según el tipo de electrodoméstico y la reparación necesaria. Ofrecemos diagnóstico gratuito y te damos un presupuesto antes de iniciar cualquier trabajo.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        ¿Trabajan con todas las marcas?
+      </summary>
+      <div class="faq-answer">
+        <p>Sí, nuestros técnicos están capacitados para trabajar con todas las marcas de electrodomésticos: LG, Samsung, Whirlpool, Mabe, Haceb, y muchas más.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        ¿Tienen servicio de emergencia?
+      </summary>
+      <div class="faq-answer">
+        <p>Sí, ofrecemos atención 24/7 para emergencias. Contáctanos por teléfono o WhatsApp y un técnico se comunicará contigo de inmediato.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-question">
+        ¿Usan repuestos originales?
+      </summary>
+      <div class="faq-answer">
+        <p>Siempre que sea posible, utilizamos repuestos originales. En caso de no estar disponibles, usamos repuestos de alta calidad con garantía.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-box">SE</span>
+        </div>
+        <h3>Servi Express</h3>
+        <p>Servicio técnico profesional de electrodomésticos en Medellín y sus alrededores.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Servicios</h4>
+        <ul>
+          <li>Lavadoras</li>
+          <li>Neveras</li>
+          <li>Estufas</li>
+          <li>Aires Acondicionados</li>
+          <li>Secadoras</li>
+          <li>Microondas</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contacto</h4>
+        <ul>
+          <li>+57 3171753640</li>
+          <li>agendaserviexpress@gmail.com</li>
+          <li>Antioquia, Colombia</li>
+          <li>Medellín y sus alrededores.</li>
+        </ul>
+      </div>
+
+
+    <div class="copyright">
+      © 2025 Servi Express S.A.S. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
